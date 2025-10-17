@@ -1,0 +1,41 @@
+# 🚦 LED Speed Control with Push Button (Arduino)
+
+Project sederhana menggunakan Arduino untuk mengatur kecepatan nyala dua LED (merah dan hijau) dengan tombol (push button) sebagai pengubah mode kecepatan.
+
+---
+
+## 🔧 Fitur
+
+- Dua LED:
+  - ledRed pada pin 2
+  - ledGreen pada pin 4
+- Satu tombol (buttonSpeedUp) pada pin 6 untuk mengubah kecepatan kedip.
+- Dua mode kecepatan:
+  - Mode cepat → saat tombol ditekan (delay(100))
+  - Mode lambat → saat tombol tidak ditekan (delay(500))
+
+---
+
+## ⚙️ Cara Kerja
+
+1. Saat tombol tidak ditekan, LED merah dan hijau akan menyala bergantian dengan jeda 500ms.  
+2. Saat tombol ditekan, kedua LED akan bergantian menyala lebih cepat dengan jeda 100ms.  
+3. Tombol dibaca menggunakan `digitalRead()`, dan kondisi ditekan diwakili oleh nilai 0 (LOW).
+
+---
+
+## 🧩 Komponen yang Dibutuhkan
+
+- 1 × Arduino Uno (atau sejenis)  
+- 1 × LED Merah  
+- 1 × LED Hijau  
+- 1 × Push Button  
+- 3 × Resistor (220Ω untuk LED, 10kΩ untuk tombol)  
+- Kabel jumper & breadboard  
+
+---
+
+## 📜 Catatan Tambahan
+
+- Tombol menggunakan internal pull-up resistor, diaktifkan dengan `digitalWrite(buttonSpeedUp, HIGH)`.  
+- Cocok untuk pembelajaran dasar digital input-output dan pengendalian LED menggunakan tombol.  
